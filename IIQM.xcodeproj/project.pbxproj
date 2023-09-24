@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0D90852AC0F87C0075C07A /* IIQM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D90842AC0F87C0075C07A /* IIQM.swift */; };
 		F9BD803A20D47CC500FC82EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD803920D47CC500FC82EE /* AppDelegate.swift */; };
 		F9BD803C20D47CC500FC82EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD803B20D47CC500FC82EE /* ViewController.swift */; };
 		F9BD803F20D47CC500FC82EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BD803D20D47CC500FC82EE /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		F9BD804F20D47CC800FC82EE /* IIQMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD804E20D47CC800FC82EE /* IIQMTests.swift */; };
 		F9BD805C20D47D3F00FC82EE /* data-20k.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9BD805920D47D3E00FC82EE /* data-20k.txt */; };
 		F9BD805D20D47D3F00FC82EE /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9BD805A20D47D3E00FC82EE /* data.txt */; };
-		F9BD805E20D47D3F00FC82EE /* iiqm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD805B20D47D3F00FC82EE /* iiqm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0D90842AC0F87C0075C07A /* IIQM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQM.swift; sourceTree = "<group>"; };
 		F974951120D4863100D9D6E8 /* Code Challenge - Crunching Large Data Sets.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Code Challenge - Crunching Large Data Sets.md"; sourceTree = "<group>"; };
 		F9BD803620D47CC500FC82EE /* IIQM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IIQM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BD803920D47CC500FC82EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		F9BD805020D47CC800FC82EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9BD805920D47D3E00FC82EE /* data-20k.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "data-20k.txt"; path = "IIQM/data/data-20k.txt"; sourceTree = SOURCE_ROOT; };
 		F9BD805A20D47D3E00FC82EE /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = data.txt; path = IIQM/data/data.txt; sourceTree = SOURCE_ROOT; };
-		F9BD805B20D47D3F00FC82EE /* iiqm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iiqm.swift; path = IIQM/src/iiqm.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,23 +63,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F9A3A62820D483D70094767D /* ui */ = {
+		F9A3A62820D483D70094767D /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				F9BD803D20D47CC500FC82EE /* Main.storyboard */,
 			);
-			name = ui;
-			path = IIQM/ui;
+			name = UI;
+			path = IIQM/UI;
 			sourceTree = "<group>";
 		};
 		F9BD802D20D47CC500FC82EE = {
 			isa = PBXGroup;
 			children = (
 				F974951120D4863100D9D6E8 /* Code Challenge - Crunching Large Data Sets.md */,
-				F9BD806020D47E1B00FC82EE /* data */,
-				F9BD806120D481E800FC82EE /* res */,
-				F9BD805F20D47DF500FC82EE /* src */,
-				F9A3A62820D483D70094767D /* ui */,
+				F9BD803920D47CC500FC82EE /* AppDelegate.swift */,
+				1C0D90842AC0F87C0075C07A /* IIQM.swift */,
+				F9BD803B20D47CC500FC82EE /* ViewController.swift */,
+				F9BD806020D47E1B00FC82EE /* Data */,
+				F9BD806120D481E800FC82EE /* Resources */,
+				F9A3A62820D483D70094767D /* UI */,
 				F9BD804D20D47CC800FC82EE /* IIQMTests */,
 				F9BD803720D47CC500FC82EE /* Products */,
 			);
@@ -103,36 +105,25 @@
 			path = IIQMTests;
 			sourceTree = "<group>";
 		};
-		F9BD805F20D47DF500FC82EE /* src */ = {
-			isa = PBXGroup;
-			children = (
-				F9BD803920D47CC500FC82EE /* AppDelegate.swift */,
-				F9BD803B20D47CC500FC82EE /* ViewController.swift */,
-				F9BD805B20D47D3F00FC82EE /* iiqm.swift */,
-			);
-			name = src;
-			path = IIQM/src;
-			sourceTree = "<group>";
-		};
-		F9BD806020D47E1B00FC82EE /* data */ = {
+		F9BD806020D47E1B00FC82EE /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				F9BD805920D47D3E00FC82EE /* data-20k.txt */,
 				F9BD805A20D47D3E00FC82EE /* data.txt */,
 			);
-			name = data;
-			path = IIQM/data;
+			name = Data;
+			path = IIQM/Data;
 			sourceTree = "<group>";
 		};
-		F9BD806120D481E800FC82EE /* res */ = {
+		F9BD806120D481E800FC82EE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				F9BD804020D47CC800FC82EE /* Assets.xcassets */,
 				F9BD804220D47CC800FC82EE /* LaunchScreen.storyboard */,
 				F9BD804520D47CC800FC82EE /* Info.plist */,
 			);
-			name = res;
-			path = IIQM/res;
+			name = Resources;
+			path = IIQM/Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BD805E20D47D3F00FC82EE /* iiqm.swift in Sources */,
 				F9BD803C20D47CC500FC82EE /* ViewController.swift in Sources */,
+				1C0D90852AC0F87C0075C07A /* IIQM.swift in Sources */,
 				F9BD803A20D47CC500FC82EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/IIQM/res/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IIQM/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,7 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/IIQM/res/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IIQM/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
