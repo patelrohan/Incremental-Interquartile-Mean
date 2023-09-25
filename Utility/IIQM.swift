@@ -21,9 +21,10 @@ class IIQM {
      - Returns: none.
      */
     func calculate(path: String) {
-        let lines           = FileReader.readFile(path: path)
-        var data: [Int]     = []
-        var currentLine = 1
+        let lines                 = FileReader.readFile(path: path)
+        var sortedData: [Int]     = []
+        var currentLine           = 1
+        var incrementalIQM        = ""
         
         for line in lines {
             // If invalid data return and display/print message
@@ -31,16 +32,40 @@ class IIQM {
                 print("Invalid data \(line) at line \(currentLine)")
                 return
             }
-            data.append(value)
-            data.sort()
+
+            insertValueInSortedArray(value, into: &sortedData)
             
-            if (data.count >= 4) {
-                let incrementalIQM = String(format:"%.2f", calculateIncrementalIQM(data: data))
-                print("Index => \(data.count), Mean => \(incrementalIQM)")
+            if (sortedData.count >= 4) {
+                 incrementalIQM = String(format:"%.2f", calculateIncrementalIQM(data: sortedData))
+                 print("Index => \(sortedData.count), Mean => \(incrementalIQM)")
             }
             currentLine += 1
         }
     }
+    
+    /**
+     Inserts an integer value into a sorted array while maintaining the array's sorting order.
+     
+     This function utilizes a binary search algorithm to efficiently determine the insertion point
+     for the specified value in the sorted array. It then inserts the value at that position,
+     ensuring that the array remains sorted.
+     
+     - Parameters:
+       - value: The integer value to be inserted into the sorted array.
+       - array: An inout parameter representing the sorted array where the value will be inserted.
+                The array will be modified in-place.
+     
+     - Complexity: The time complexity of this operation is O(log n), where 'n' is the number of elements
+                   in the sorted array. The function performs a binary search to find the insertion point,
+                   and the insertion itself is an O(n) operation in the worst case when the value needs to be
+                   inserted at the beginning of the array.
+     */
+    
+    func insertValueInSortedArray(_ value: Int, into array: inout [Int]) {
+        let index = RPBinarySearch.search(value, in: array)
+        array.insert(value, at: index)
+    }
+
     
     /**
      Calculates the Incremental Interquartile Mean (IQM) from the given array of integers.
