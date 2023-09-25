@@ -10,17 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         calculateIIQM()
     }
     
-    
     private func calculateIIQM(){
         let iiqm = IIQM()
         let startTime = Date()
-        iiqm.calculate(path: Bundle.main.path(forResource: "data-20k", ofType: "txt")!)
+        iiqm.calculate(path: Bundle.main.path(forResource: "data", ofType: "txt")!)
         let endTime = Date()
         print(DateInterval(start: startTime, end: endTime).duration)
     }

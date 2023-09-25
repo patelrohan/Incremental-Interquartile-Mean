@@ -28,7 +28,7 @@ class IIQM {
         
         for line in lines {
             // If invalid data return and display/print message
-            guard let value = Int(line), value > 0 && value < 600 else{
+            guard let value = Int(line), value > 0 && value <= 600 else{
                 print("Invalid data \(line) at line \(currentLine)")
                 return
             }
@@ -60,7 +60,6 @@ class IIQM {
                    and the insertion itself is an O(n) operation in the worst case when the value needs to be
                    inserted at the beginning of the array.
      */
-    
     func insertValueInSortedArray(_ value: Int, into array: inout [Int]) {
         let index = RPBinarySearch.search(value, in: array)
         array.insert(value, at: index)
