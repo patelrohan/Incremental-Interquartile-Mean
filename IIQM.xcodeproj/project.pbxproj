@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C0D90852AC0F87C0075C07A /* IIQM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D90842AC0F87C0075C07A /* IIQM.swift */; };
+		1C0D90882AC10A0F0075C07A /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D90872AC10A0F0075C07A /* FileReader.swift */; };
 		F9BD803A20D47CC500FC82EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD803920D47CC500FC82EE /* AppDelegate.swift */; };
 		F9BD803C20D47CC500FC82EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BD803B20D47CC500FC82EE /* ViewController.swift */; };
 		F9BD803F20D47CC500FC82EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BD803D20D47CC500FC82EE /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		1C0D90842AC0F87C0075C07A /* IIQM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQM.swift; sourceTree = "<group>"; };
+		1C0D90872AC10A0F0075C07A /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		F974951120D4863100D9D6E8 /* Code Challenge - Crunching Large Data Sets.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Code Challenge - Crunching Large Data Sets.md"; sourceTree = "<group>"; };
 		F9BD803620D47CC500FC82EE /* IIQM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IIQM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BD803920D47CC500FC82EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0D90862AC109D90075C07A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1C0D90842AC0F87C0075C07A /* IIQM.swift */,
+				1C0D90872AC10A0F0075C07A /* FileReader.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		F9A3A62820D483D70094767D /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +88,8 @@
 			children = (
 				F974951120D4863100D9D6E8 /* Code Challenge - Crunching Large Data Sets.md */,
 				F9BD803920D47CC500FC82EE /* AppDelegate.swift */,
-				1C0D90842AC0F87C0075C07A /* IIQM.swift */,
 				F9BD803B20D47CC500FC82EE /* ViewController.swift */,
+				1C0D90862AC109D90075C07A /* Utility */,
 				F9BD806020D47E1B00FC82EE /* Data */,
 				F9BD806120D481E800FC82EE /* Resources */,
 				F9A3A62820D483D70094767D /* UI */,
@@ -231,6 +242,7 @@
 			files = (
 				F9BD803C20D47CC500FC82EE /* ViewController.swift in Sources */,
 				1C0D90852AC0F87C0075C07A /* IIQM.swift in Sources */,
+				1C0D90882AC10A0F0075C07A /* FileReader.swift in Sources */,
 				F9BD803A20D47CC500FC82EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

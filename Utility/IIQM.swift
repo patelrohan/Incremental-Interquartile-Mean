@@ -10,7 +10,7 @@ import Foundation
 
 class IIQM {
     func calculate(path: String) {
-        let lines = readFile(path: path)
+        let lines = FileReader.readFile(path: path)
         var data: [Int] = []
         for line in lines {
             let value: Int = Int(line)!
@@ -43,18 +43,6 @@ class IIQM {
                 let meanString = String(format:"%.2f", mean)
                 print("Index => \(data.count), Mean => \(meanString)")
             }
-        }
-    }
-    
-    func readFile(path: String) -> Array<String> {
-        do {
-            let contents:NSString = try NSString(contentsOfFile: path, encoding: String.Encoding.ascii.rawValue)
-            let trimmed:String = contents.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-            let lines:Array<String> =  NSString(string: trimmed).components(separatedBy: NSCharacterSet.newlines)
-            return lines
-        } catch {
-            print("Unable to read file: \(path)")
-            return [String]()
         }
     }
 }
