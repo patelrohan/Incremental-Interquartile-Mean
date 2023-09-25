@@ -23,9 +23,14 @@ class IIQM {
     func calculate(path: String) {
         let lines           = FileReader.readFile(path: path)
         var data: [Int]     = []
+        var currentLine = 1
         
         for line in lines {
-            let value: Int = Int(line)!
+            // If invalid data return and display/print message
+            guard let value = Int(line), value > 0 && value < 600 else{
+                print("Invalid data \(line) at line \(currentLine)")
+                return
+            }
             data.append(value)
             data.sort()
             
@@ -33,6 +38,7 @@ class IIQM {
                 let incrementalIQM = String(format:"%.2f", calculateIncrementalIQM(data: data))
                 print("Index => \(data.count), Mean => \(incrementalIQM)")
             }
+            currentLine += 1
         }
     }
     
