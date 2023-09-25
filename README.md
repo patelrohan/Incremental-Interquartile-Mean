@@ -25,3 +25,23 @@ In response to the provided code challenge, I took several steps to improve the 
 
 Overall, these improvements aim to transform the code into something that is not only more readable but also adheres to best practices and serves as a valuable resource for developers aiming to understand IIQM calculations.
 
+
+# Part 2: Code Optimization
+
+| Dataset Size (# of Elements)      | Old Approach (Time) | New Approach (Time) |
+|-----------------------------------|---------------------|---------------------|
+| 20,000                            | ~20.5 seconds       | ~4.8 seconds        |
+| 100,000                           | ~549 seconds        | ~120 seconds        |
+
+
+**1. Explain how your optimization works and why you took this approach ?**
+- The provided code initially exhibited a time complexity of O(n^2 * log n) due to sorting the dataset after each element append. resulting in inefficiency. This is inefficient because we are inserting a new value to already sorted array and re-sorting it after inserting new value. 
+To address this, I employed a more optimal strategy. By utilizing Binary Search, we can determine the precise insertion point for a new value, ensuring that the array remains sorted. This approach drastically reduces the time complexity to O(n * log n), as it eliminates the need to re-sort the entire dataset after each insertion.
+
+**2. Would your approach continue to work if there were millions or billions of input values?**
+- The scalability of this approach depends on several critical factors. It is anticipated to demonstrate efficient performance even when dealing with datasets comprising millions or billions of input values, provided that memory storage does not pose a constraint. However, the efficiency is also contingent upon the distribution of the data. If the data distribution necessitates shifting a significant proportion of elements in the array to the right after a majority of Binary Search insertions, this may adversely affect overall performance. Nevertheless, in the majority of scenarios, an algorithm with a time complexity of O(n * log n) should maintain its efficiency even when confronted with extensive datasets.
+
+**3. Would your approach still be efficient if you needed to store the intermediate state between each IQM calculation in a data store?  If not, how would you change it to meet this requirement?**
+- Unable to comprehend question. Awaiting code challenge preparers response with clarification at the time of writing. 
+
+
