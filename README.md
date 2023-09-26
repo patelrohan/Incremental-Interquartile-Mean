@@ -9,16 +9,16 @@ In response to the provided code challenge, I took several steps to improve the 
 - One of the initial improvements I made was standardizing the file and folder naming conventions to align with iOS naming conventions. This step not only adheres to industry standards but also enhances code readability.
 
 **3. Code Refactoring:**
-- I decided to move the logic from the `viewDidLoad` method to a separate function. `viewDidLoad` serves as a gateway to any class, and keeping it clean and concise is essential for understanding the code flow.
-- I introduced a utility class called `FileReader` to encapsulate the file reading logic, ensuring that the `IIQM` class remains focused on its core functionality.
-- Within the `calculateIncrementalIQM` function, I separated the code responsible for calculating incremental IQM for each value in the data set. This separation enhances unit testing possibilities and code maintainability.
+- I decided to move the logic from the `viewDidLoad()` method to a separate function. `viewDidLoad()` serves as a gateway to any class, and keeping it clean and concise is essential for understanding the code flow.
+- I introduced a utility class called `FileReader` to encapsulate the file reading logic, ensuring that the `IIQM` class remains focused on its core functionality. Similarly, created utility class `RPBinarySearch` to contain the logic of Binary Search. 
+- Refactored `calculate` function, isolating the code/logic responsible for calculating incremental IQM for each value into its own `calculateIncrementalIQM()` function. This separation not only enhances unit testing but also promotes code modularity.
 
 **4. Comments and Documentation:**
-- To improve code comprehensibility, I added comments within the `calculateIncrementalIQM` function to explain key logic where needed.
-- At the top of the file, I included two valuable resources that I found during my research. These resources can aid future developers in understanding the logic behind IIQM calculations.
+- To improve code comprehensibility, I added comments within the `calculateIncrementalIQM()` function to explain key logic where I felt would be valuable for future developers who might not be aware of IIQM calculation hoping expediated comprehension of the logic. 
+- At the top of the file, I included two valuable resources that I found helpful during my research. These resources can aid future developers in understanding the logic behind IIQM calculations better and quicker.
 
 **5. Unit Testing:**
-- I emphasized the importance of unit testing, particularly for the `calculateIncrementalIQM` function. Accurate calculation of IIQM is crucial, and comprehensive unit tests ensure the reliability of this function.
+- I emphasized the importance of unit testing, particularly for the `calculateIncrementalIQM()` function. Accurate calculation of IIQM is crucial, and comprehensive unit tests ensure the reliability of this function. Similarly, `RPBinarySearch` class's `search()` function is inlcuded in unit testing to ensure its reliability. 
 
 **6. Simplification:**
 - Lastly, I simplified the equation for `upperQuartileIndex` to make it more concise and understandable.
