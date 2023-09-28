@@ -42,6 +42,6 @@ To address this, I employed a more optimal strategy. By utilizing Binary Search,
 - The scalability of this approach depends on several critical factors. It is anticipated to demonstrate efficient performance even when dealing with datasets comprising millions or billions of input values, provided that memory storage does not pose a constraint. However, the efficiency is also contingent upon the distribution of the data. If the data distribution necessitates shifting a significant proportion of elements in the array to the right after a majority of Binary Search insertions, this may adversely affect overall performance. Nevertheless, in the majority of scenarios, an algorithm with a time complexity of O(n * log n) should maintain its efficiency even when confronted with extensive datasets.
 
 **3. Would your approach still be efficient if you needed to store the intermediate state between each IQM calculation in a data store?  If not, how would you change it to meet this requirement?**
-- Unable to comprehend question. Awaiting code challenge preparers response with clarification at the time of writing. 
+- Core Data shall be able to handle hundreds of write operations per second. With careful design and optimization, achieving high write throughput is feasible. Batch processing, where IQM data is temporarily stored in an array before writing to Core Data, can alleviate performance bottlenecks, if there are any.  For extremely high write loads, additional scaling and architecture strategies might need to be considered like distributed databases.
 
 
